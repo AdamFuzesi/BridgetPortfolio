@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { meta, contactConfig } from "../../content_option";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -19,7 +18,7 @@ export const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    setFormdata((prev) => ({ ...prev, loading: true }));
 
     const templateParams = {
       from_name: formData.email,
@@ -39,8 +38,10 @@ export const ContactUs = () => {
         (result) => {
           console.log(result.text);
           setFormdata({
+            ...formData,
             loading: false,
-            alertmessage: "Thank you for your email, I will get back to you shortly!",
+            alertmessage:
+              "Thank you for your email, I will get back to you shortly!",
             variant: "success",
             show: true,
           });
@@ -48,7 +49,9 @@ export const ContactUs = () => {
         (error) => {
           console.log(error.text);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            ...formData,
+            loading: false,
+            alertmessage: `Failed to send! ${error.text}`,
             variant: "danger",
             show: true,
           });
@@ -72,28 +75,36 @@ export const ContactUs = () => {
           <title>{meta.title} | Contact</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
+
+        {/* Heading Row - reduced margins */}
+        <Row className="mt-3 mb-5 pt-md-2">
           <Col lg="8">
             <h1 className="display-4 mb-4">Contact</h1>
-            <hr className="t_border my-4 ml-0 text-left" />
+            {/* Smaller horizontal rule spacing */}
+            <hr className="t_border my-2 ml-0 text-left" />
           </Col>
         </Row>
-        <Row className="sec_sp">
+
+        {/* Alert Row - small margin */}
+        <Row className="mb-2">
           <Col lg="12">
             <Alert
-              //show={formData.show}
               variant={formData.variant}
               className={`rounded-0 co_alert ${
                 formData.show ? "d-block" : "d-none"
               }`}
-              onClose={() => setFormdata({ show: false })}
+              onClose={() => setFormdata({ ...formData, show: false })}
               dismissible
             >
               <p className="my-0">{formData.alertmessage}</p>
             </Alert>
           </Col>
-          <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Let's get in touch!</h3>
+        </Row>
+
+        {/* Text/Info Row - small margin */}
+        <Row className="mb-4">
+          <Col lg="12">
+            <h3 className="color_sec mb-3">Let's get in touch!</h3>
             <address>
               <strong>Email:</strong>{" "}
               <a href={`mailto:${contactConfig.MY_EMAIL}`}>
@@ -106,9 +117,13 @@ export const ContactUs = () => {
                 {contactConfig.MY_ALTEMAIL}
               </a>
             </address>
-            <p>{contactConfig.description}</p>
+            <p className="mb-2">{contactConfig.description}</p>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+        </Row>
+
+        {/* Contact Form Row - small margin */}
+        <Row className="mb-3">
+          <Col lg="12">
             <form onSubmit={handleSubmit} className="contact__form w-100">
               <Row>
                 <Col lg="6" className="form-group">
@@ -117,7 +132,7 @@ export const ContactUs = () => {
                     id="name"
                     name="name"
                     placeholder="Name"
-                    value={formData.name || ""}
+                    value={formData.name}
                     type="text"
                     required
                     onChange={handleChange}
@@ -130,7 +145,7 @@ export const ContactUs = () => {
                     name="email"
                     placeholder="Email"
                     type="email"
-                    value={formData.email || ""}
+                    value={formData.email}
                     required
                     onChange={handleChange}
                   />
@@ -157,7 +172,9 @@ export const ContactUs = () => {
             </form>
           </Col>
         </Row>
+
       </Container>
+
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );

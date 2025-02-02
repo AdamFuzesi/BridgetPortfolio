@@ -1,98 +1,76 @@
-const logotext = "ADAM C. FUZESI";
+const logotext = "Bridget Kearney-Fick";
 const meta = {
-    title: "Adam Fuzesi",
-    description: "I'm a Software Engineer and Computer Science Student",
+    title: "Bridget Kearney",
+    description: "Urban Planner/Communit Engaged",
 };
 
 const introdata = {
     
-    title: "Hey, I'm Adam",
+    title: "Hi, I'm Bridget",
     animated: {
-        first: "Aspiring Software Engineer",
-        second: "Google Cloud Certified",
-        third: "Cloud Engineer Intern",
-        fourth: "Hungarian/Canadian",
-        fifth: "BCS student minoring in Mathematics"
+        first: "Aspiring Urban Planner",
+        second: "3rd Year Dalhousie University Community Design Student",
+        third: "Engaged Member of Dalhousie's Society of Undergraduate Planners",
+        fourth: "ArcGIS Proficient",
+        fifth: "Toronto/Halifax Based"
     },
-    description: "Get to know a little about me...",
-    intro_img_url: "/images/evenBetterStudious.png",
+    description: "Get to know me!",
+    intro_img_url: "/images/bridgetStudio2.png",
     // changed based on the use case to showcase and make sure it matches it based off the animation
 };
 
 const dataabout = {
-    title: "A bit about myself...",
-    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty. My software engineering journey began early in high school, developing Python scripts and applications for various businesses or personal use, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
+    title: "Let me introduce myself!",
+    aboutme: "I'm a third-year Community Design and Planning student at Dalhousie University who is passionate about creating thriving, inclusive communities. My experience spans both academic and professional settings, where I have honed strong research, organizational, and technical skills. Whether I’m conducting environmental assessments using ArcGIS, creating visually compelling plans in Adobe Illustrator, or coordinating teams in dynamic settings like YMCA's Camp Waabanaki, I bring an adaptable, people-focused approach to every project. ",
+    secondaryText: "Driven by a keen interest in sustainability, I believe thoughtful urban design can foster greater equity and accessibility for all. Having a personal experience with scoliosis, I’m especially committed to making sure built environments serve individuals of varying abilities and needs. In addition to my coursework and on-the-job experience, I enjoy travel, art, reading, and running—pursuits that energize my creativity and reinforce my belief in well-rounded, holistic community planning.",
+    finalText: "Ultimately, I aim to leverage my problem-solving mindset, teamwork experience, and dedication to inclusive design to support projects that shape stronger, more resilient neighborhoods."
 };
 const worktimeline = [{
-        jobtitle: "Cloud Engineer ",
-        where: "DeepSense",
-        date: "04/2024 - 09/2024",
+        jobtitle: "Game Staff and Client Experience Desk",
+        where: "Dalplex",
+        date: "Jan 2024 - Present",
     },
     {
-        jobtitle: "Healthcare IT programmer",
-        where: "Vitality",
-        date: "05/2020 - 09/2020",
+        jobtitle: "Head of Camper Care",
+        where: "YMCA Camp Waabanaki",
+        date: "May 2024 - Aug 2024",
     },
     {
-        jobtitle: "Student Pharmacy Assistant",
-        where: "Shoppers",
-        date: "11/2018 - 03/2020",
+        jobtitle: "Personal Shopper",
+        where: "Loblaws",
+        date: "Oct 2020 - March 2022",
     },
 ];
 
 // add in code language image based visual aspect next to the names of the languages
 const skills = [{
-        name: "Python",
-        image: "/images/pyhtonImage.png"
+        name: "Canva",
+        image: "/images/canva.webp"
     },
     {
-        name: "C++",
-        image: "/images/cpp.png"
+        name: "ArcGIS",
+        image: "/images/ArcGIS_logo.png"
     },
     {
-        name: "Javascript",
-        image: "/images/javascript.png"
+        name: "Adobe Illustrator",
+        image: "/images/Adobe.png"
     },
     {
-        name: "Typescript",
-        image: "/images/typescript.png"
+        name: "Q GIS",
+        image: "/images/qgislogo.png"
 
     },
     {
-        name: "React",
-        image: "/images/react.png"
+        name: "AutoCad",
+        image: "/images/autocadlogo.png"
     },
     {
-        name: "Java",
-        image: "/images/java.png"
+        name: "SketchUp",
+        image: "/images/sketch.svg"
     },
     {
-        name: "C",
-        image: "/images/c.png"
-    },
-    {
-        name: "Swift",
-        image: "/images/swift.png"
-    },
-    {
-        name: "NodeJS",
-        image: "/images/nodejsicon.png"
-    },
-    {
-        name: "Figma",
-        image: "/images/Figma-1-logo.png"
-    },
-    {
-        name: "GraphQL",
-        image : "/images/graphQLogo.png"
-    },
-    {
-        name: "Google Cloud Platform",
-        image: "/images/gCloud.png"
-    },
-    {
-        name: "AWS",
-        image: "/images/aws.svg"
+        name: "Microsoft Office",
+        image: "/images/mlogo.png"
     }
 
 ];
@@ -278,9 +256,9 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    MY_EMAIL: "adamfuzeri@gmail.com",
-    MY_ALTEMAIL: "AdamFuzesi@dal.ca",
-    description: "Feel free to reach out to me through this form, or any of my Emails or Socials linked in the sidebar!",
+    MY_EMAIL: "bridget.kearneyfick@gmail.com",
+    MY_ALTEMAIL: "bridgetKearney@dal.ca",
+    description: "Reach out to me through this contact form, or either of my emails, looking forward to chatting!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_tvxlvub",
@@ -289,10 +267,9 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com/AdamFuzesi",
-    facebook: "https://facebook.com",
-    linkedin: "https://www.linkedin.com/in/adam-fuzesi-217494296/",
+    linkedin: "https://www.linkedin.com/in/bridget-kearney-fick-9337132b1/",
     twitter: "https://twitter.com",
+    instagram: "https://www.instagram.com/briidgetkearney/?hl=en"
 };
 export {
     meta,

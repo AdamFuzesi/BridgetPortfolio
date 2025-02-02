@@ -10,6 +10,12 @@ import Themetoggle from "../components/themetoggle";
                   <li className="menu_item">
                     <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
                   </li>
+
+                  <li className="menu_item">
+                  <Link onClick={handleToggle} to="/Extracurricular" className="my-3">Involvement</Link>
+                  </li>
+
+                  Made for the involvement component, add if bridet wants for later!
 */
 
 const Headermain = () => {
@@ -44,9 +50,6 @@ const Headermain = () => {
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
-                  </li>
-                  <li className="menu_item">
-                  <Link onClick={handleToggle} to="/Extracurricular" className="my-3">Involvement</Link>
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/contact" className="my-3">Contact</Link>
