@@ -232,3 +232,10 @@ section {
 .intro_sec .h_bg-image {
     filter: saturate(0.5);
 }
+
+
+.bigger-title {
+    font-size: 4rem;      /* Adjust as desired */
+    font-weight: 700;     /* Make it bold if you like */
+    line-height: 1.2;     /* Control spacing between lines */
+  }

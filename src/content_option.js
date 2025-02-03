@@ -25,6 +25,14 @@ const dataabout = {
     secondaryText: "Driven by a keen interest in sustainability, I believe thoughtful urban design can foster greater equity and accessibility for all. Having a personal experience with scoliosis, I’m especially committed to making sure built environments serve individuals of varying abilities and needs. In addition to my coursework and on-the-job experience, I enjoy travel, art, reading, and running—pursuits that energize my creativity and reinforce my belief in well-rounded, holistic community planning.",
     finalText: "Ultimately, I aim to leverage my problem-solving mindset, teamwork experience, and dedication to inclusive design to support projects that shape stronger, more resilient neighborhoods."
 };
+
+const InvolvementData = {
+    title: "hello",
+    textOne: "",
+    textTwo: "",
+    textThree: ""
+};
+
 const worktimeline = [{
         jobtitle: "Game Staff and Client Experience Desk",
         where: "Dalplex",

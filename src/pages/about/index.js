@@ -21,6 +21,13 @@ TODO:
 - Add a little game
 */
 
+const InvolvementData = {
+  title: "Dalhousie Society Of Undergraduate Planners",
+  textOne: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor erat eu vehicula bibendum. Integer ut lacus tristique, porttitor turpis vitae, vehicula ex. Curabitur pharetra id sem vel sodales. Praesent at ultricies orci, sed lacinia nisi. Phasellus vitae purus nec enim feugiat vehicula. Pellentesque purus enim, lacinia vitae vehicula et, gravida id neque. Aliquam pretium elit eget rhoncus tincidunt. Quisque sit amet gravida mi. Sed vehicula hendrerit ante nec faucibus. Nulla vel arcu mattis, accumsan nunc accumsan, posuere eros.",
+  textTwo: "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sem eros, rutrum ut malesuada porttitor, interdum nec felis. Integer tempor dui purus, vel accumsan felis molestie elementum. Integer at nunc lacus. Nam ut nisi varius massa vestibulum molestie a non tellus. Aliquam id metus condimentum, blandit justo non, sollicitudin magna. Morbi ligula nunc, blandit quis elit at, cursus mattis eros. Fusce eu convallis tellus, id pretium nisi. Ut volutpat convallis est eget ultrices. Duis in felis vel tortor posuere finibus. Donec sed orci eu nisl maximus pulvinar. Etiam elementum finibus metus, vitae porttitor mauris tempor eu.",
+  textThree: "Morbi pellentesque eros vel mauris venenatis blandit. Donec ultricies, sem non lacinia molestie, eros magna convallis metus, vitae molestie diam augue at orci. Nulla facilisi. Etiam sollicitudin vel justo in cursus. Nunc ornare pellentesque justo, id pharetra neque pharetra vitae. Cras venenatis, lectus ac semper interdum, tortor massa tincidunt ligula, sit amet pharetra nibh tellus sit amet lectus. Suspendisse feugiat semper lacus non lobortis. Nulla facilisi. Suspendisse molestie vel eros hendrerit luctus. Suspendisse at leo in velit ornare auctor et at erat."
+};
+
 export const About = () => {
   // reference for scrolling container
   const scrollRef = useRef(null);
@@ -33,7 +40,7 @@ export const About = () => {
     let maxScroll = scrollContainer.scrollWidth / 2;
     let scrollStep = 0.5;
 
-    // Function to scale items based on distance to container's center
+    // function to scale items based on distance to container's center
     const scaleSkillItems = () => {
       const containerCenter = scrollContainer.clientWidth / 2;
       const containerRect = scrollContainer.getBoundingClientRect();
@@ -146,7 +153,7 @@ export const About = () => {
         {/* ===== Work Experience ===== */}
         <Row>
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Experience...</h3>
+             <h1 className="display-4 mb-4">Work Experience...</h1>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -185,7 +192,7 @@ export const About = () => {
           }}
         >
           <Col lg="12" style={{ padding: 0 }}>
-            <h3 className="color_sec py-4" style={{ marginLeft: "10rem" }}>
+            <h3 className="display-6 py-1" style={{ marginLeft: "10rem" }}>
               Skills and technical proficiencies...
             </h3>
             
@@ -227,40 +234,60 @@ export const About = () => {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col lg="12">
-            <h3 className="color_sec">Involvement...</h3>
-            <hr className="t_border ml-0 text-left" />
+        <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Involvement...</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        {services.map((data, i) => (
-          <Row className="project-row" key={i}>
-            <Col lg="5" md="5" sm="12">
-              <img
-                src={data.image}
-                alt={data.title}
-                className="project-image"
-              />
-            </Col>
-            <Col lg="7" md="7" sm="12" className="d-flex align-items-center">
-              <div className="project-text">
-                <h5 className="service__title">{data.title}</h5>
-                <p className="service_desc">{data.description}</p>
-                {/* conditionally render the "Learn More" button if link is provided */}
-                {data.link && (
-                  <a
-                    href={data.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                  >
-                    Learn More
-                  </a>
-                )}
+
+        {/* ===== About Box ===== */}
+        <Row className="sec_sp">
+          <Col lg="12">
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.2)",
+                borderRadius: "20px",
+                boxShadow:
+                  "0 12px 24px rgba(0, 0, 0, 0.2), 0 30px 40px rgba(0, 0, 0, 0.1)",
+                overflow: "hidden",      // keeps the corners rounded
+                padding: "20px",         // padding inside the box
+                position: "relative",    // positions the container relatively
+                minHeight: "450px",      // ensures a minimum height
+                marginBottom: "50px",
+                // set for now ask bridget about design choices
+              }}
+            >
+              {/* Image positioned top-right */}
+              <div style={{ float: "right", margin: "10px 0 10px 20px" }}>
+                <img
+                  src="/images/Group3.jpg"
+                  alt="About Me"
+                  style={{
+                    width: "500px",       // fixed width for the image
+                    height: "auto",       // auto height to maintain aspect ratio
+                    borderRadius: "12px",  // rounded corners for the image
+                    boxShadow: "0 12px 24px rgba(0, 0, 0, 0.2), 0 30px 40px rgba(0, 0, 0, 0.1)"
+                  }}
+                />
               </div>
-            </Col>
-          </Row>
-        ))}
+              
+              {/* Text Content */}
+              <h3 className="color_sec py-4">{InvolvementData.title}</h3>
+              <Row className="mb-1 mt-3 pt-md-3">
+              <Col lg="8">
+                <hr className="t_border my-4 ml-0 text-left" />
+              </Col>
+            </Row>
+              <p>{dataabout.aboutme}</p>
+              <p style={{ marginTop: "4px" }}>{InvolvementData.textTwo}</p>
+              <p style={{ marginTop: "4px" }}>{InvolvementData.textThree}</p>
+            </div>
+          </Col>
+        </Row>
+
+
+
       </Container>
     </HelmetProvider>
   );
