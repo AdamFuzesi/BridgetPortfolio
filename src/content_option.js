@@ -269,9 +269,9 @@ const contactConfig = {
     description: "Reach out to me through this contact form, or either of my emails, looking forward to chatting!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_tvxlvub",
-    YOUR_TEMPLATE_ID: "template_7a4n2l8",
-    YOUR_USER_ID: "xqk-KiWE2GjGCqEoj",
+    YOUR_SERVICE_ID: "service_33oc9ti",
+    YOUR_TEMPLATE_ID: "",
+    YOUR_USER_ID: "",
 };
 
 const socialprofils = {
