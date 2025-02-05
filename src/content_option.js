@@ -70,7 +70,7 @@ const skills = [{
     },
     {
         name: "AutoCad",
-        image: "/images/autocadlogo.png"
+        image: "/images/autocadGood.png"
     },
     {
         name: "SketchUp",
