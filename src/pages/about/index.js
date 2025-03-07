@@ -23,9 +23,9 @@ TODO:
 
 const InvolvementData = {
   title: "Dalhousie Society Of Undergraduate Planners",
-  textOne: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor erat eu vehicula bibendum. Integer ut lacus tristique, porttitor turpis vitae, vehicula ex. Curabitur pharetra id sem vel sodales. Praesent at ultricies orci, sed lacinia nisi. Phasellus vitae purus nec enim feugiat vehicula. Pellentesque purus enim, lacinia vitae vehicula et, gravida id neque. Aliquam pretium elit eget rhoncus tincidunt. Quisque sit amet gravida mi. Sed vehicula hendrerit ante nec faucibus. Nulla vel arcu mattis, accumsan nunc accumsan, posuere eros.",
-  textTwo: "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sem eros, rutrum ut malesuada porttitor, interdum nec felis. Integer tempor dui purus, vel accumsan felis molestie elementum. Integer at nunc lacus. Nam ut nisi varius massa vestibulum molestie a non tellus. Aliquam id metus condimentum, blandit justo non, sollicitudin magna. Morbi ligula nunc, blandit quis elit at, cursus mattis eros. Fusce eu convallis tellus, id pretium nisi. Ut volutpat convallis est eget ultrices. Duis in felis vel tortor posuere finibus. Donec sed orci eu nisl maximus pulvinar. Etiam elementum finibus metus, vitae porttitor mauris tempor eu.",
-  textThree: "Morbi pellentesque eros vel mauris venenatis blandit. Donec ultricies, sem non lacinia molestie, eros magna convallis metus, vitae molestie diam augue at orci. Nulla facilisi. Etiam sollicitudin vel justo in cursus. Nunc ornare pellentesque justo, id pharetra neque pharetra vitae. Cras venenatis, lectus ac semper interdum, tortor massa tincidunt ligula, sit amet pharetra nibh tellus sit amet lectus. Suspendisse feugiat semper lacus non lobortis. Nulla facilisi. Suspendisse molestie vel eros hendrerit luctus. Suspendisse at leo in velit ornare auctor et at erat."
+  textOne: "As the current Communications Coordinator for the Dalhousie Society of Undergraduate Planners (SUP), I manage our society’s email communications, maintain essential administrative records, and organize key documents to keep the team on track. This role also involves overseeing our meeting agendas, ensuring everyone has the information they need to stay informed and engaged. Through these responsibilities, I’ve gained valuable experience in collaboration, organization, and the behind-the-scenes work that helps our society function smoothly.",
+  textTwo: "As the incoming Vice President of the Dalhousie Society of Undergraduate Planners (SUP), I’m excited to help drive our mission of connecting students with real-world experiences. My goal is to maintain the momentum of initiatives like our Office Tour Series and Technical Series, because planning truly comes alive when we explore it firsthand and develop the practical skills that will serve us in our careers. Whether we’re visiting cutting-edge design firms or hosting hands-on workshops in GIS and illustration software, I want SUP to be a place where students feel supported, connected, and empowered.",
+  textThree: "Above all, I believe in fostering a collaborative environment that bridges academic theory and real-world application. By collaborating with local planning agencies, municipal leaders, and professional organizations, we can offer students an inside look at how planning shapes our communities. Through these events, I aim to strengthen professional connections, build technical competencies, and cultivate a sense of community among our members. I’m looking forward to helping SUP grow as a resource where students not only gain practical experience, but also become part of a supportive network that lasts long after graduation."
 };
 
 export const About = () => {
@@ -279,7 +279,7 @@ export const About = () => {
                 <hr className="t_border my-4 ml-0 text-left" />
               </Col>
             </Row>
-              <p>{dataabout.aboutme}</p>
+              <p style={{marginTop: "1px"}}>{InvolvementData.textOne}</p>
               <p style={{ marginTop: "4px" }}>{InvolvementData.textTwo}</p>
               <p style={{ marginTop: "4px" }}>{InvolvementData.textThree}</p>
             </div>
